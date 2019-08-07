@@ -1,0 +1,40 @@
+.noti{
+    color: red;
+    text-align: center;
+}
+
+.center{
+    text-align: center;
+    position: relative;
+    left: 50%;
+    margin-left: -175px;
+    width: 350px;
+    z-index: 9999;
+    background-color:azure;
+}
+
+.input-group{
+    width: 344px;
+    position: relative;
+    left: 50%;
+    margin-left: -172px;
+}
+
+.btn-outline-primary{
+    width: 346px;
+}
+
+.nav-link{
+    text-align: center;
+}
+
+.navtext{
+    color: white;
+    position: relative;
+    left: 50%;
+    margin-left: -142px;
+}
+
+body{
+    text-align: center;
+}
