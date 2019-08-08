@@ -12,5 +12,5 @@ function rebirth(){
     var countatt = Math.floor((attack/fullpoint)*(point)+0.5);
     var countdef = Math.floor((defense/fullpoint)*(point)+0.5);
     var countspeed = Math.floor((speed/fullpoint)*(point)+0.5);
-    alert("환생 포인트 : "+(point+(count*10))+"\n"+"체   력 : "+counthp+"\n완   력 : "+countatt+"\n건   강 : "+countdef+"\n스피드 : "+countspeed+"\n---------------\n최대 환생 포인트\n1환생 : 65개\n2환생 : 97개\n3환생 : 127개\n4환생 : 158개\n5환생 : 188개");
+    alert("환생 포인트 : "+(point+(count*10))+"\n"+"체   력 : "+counthp+"\n완   력 : "+countatt+"\n건   강 : "+countdef+"\n스피드 : "+countspeed+"\n오차가 있을 수 있습니다!");
 }
