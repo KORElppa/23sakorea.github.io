@@ -3,7 +3,7 @@
 <html lang="ko">
 
 <head>
-    <title>23SA 온라인 환생 포인트 계산기</title>
+    <title>23SA 웹 유틸리티</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -16,93 +16,27 @@
 
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <span class="navtext">23SA 온라인 환생 포인트 계산기</span>
+        <span class="navtext">23SA 온라인 유틸리티</span>
     </nav>
     <br>
-    <div>
-        <div class="input-group mb-3 input-group-sm">
-            <div class="input-group-prepend">
-                <span class="input-group-text">환&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;생</span>
-            </div>
-           <input id="count" type="text" class="form-control" placeholder="해당 환생을 입력해주세요 (1~5)">
-        </div>
-        <div class="input-group mb-3 input-group-sm">
-            <div class="input-group-prepend">
-                <span class="input-group-text">레&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;벨</span>
-            </div>
-            <input id="level" type="text" class="form-control" placeholder="누적 캐릭터 레벨 입력">
-        </div>
-        <div class="input-group mb-3 input-group-sm">
-            <div class="input-group-prepend">
-                <span class="input-group-text">환포 퀘스트</span>
-            </div>
-            <input id="qust" data-toggle="tooltip" data-placement="bottom" title="자동 목록의 환생 포인트 퀘스트는 18개 입니다." type="text" class="form-control" placeholder="누적 클리어 환생 포인트 퀘스트 개수">
-        </div>
-        <div class="input-group mb-3 input-group-sm">
-            <div class="input-group-prepend">
-                <span class="input-group-text">체&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;력</span>
-            </div>
-            <input id="hp" type="text" class="form-control" placeholder="체력 스텟 포인트 입력">
-        </div>
-        <div class="input-group mb-3 input-group-sm">
-            <div class="input-group-prepend">
-                <span class="input-group-text">완&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;력</span>
-            </div>
-            <input id="attack" type="text" class="form-control" placeholder="완력 스텟 포인트 입력">
-        </div>
-        <div class="input-group mb-3 input-group-sm">
-            <div class="input-group-prepend">
-                <span class="input-group-text">건&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;강</span>
-            </div>
-            <input id="defense" type="text" class="form-control" placeholder="건강 스텟 포인트 입력">
-        </div>
-        <div class="input-group mb-3 input-group-sm">
-            <div class="input-group-prepend">
-                <span class="input-group-text">스&nbsp;&nbsp;&nbsp;&nbsp;피&nbsp;&nbsp;&nbsp;&nbsp;드</span>
-            </div>
-            <input id="speed" type="text" class="form-control" placeholder="스피드 스텟 포인트 입력">
-        </div>
-    </div>
-    <button type="button" class="btn btn-outline-primary" onclick="rebirth();">포인트 계산</button>
+    <button class="mainbutton leftbtn" onclick="link('index2.html')">환생 포인트<br><br>계산기</button>
+    <button class="mainbutton" onclick="link('index3.html')">탑승 능력치<br><br>계산기</button>
     <p></p>
-    <div class="center">
-        <div class="toast" data-autohide="false">
-            <div class="toast-header">
-                <strong class="mr-auto text-primary">경고!</strong>
-                <small class="text-muted">By.ElppaDev</small>
-                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
-            </div>
-            <div class="toast-body">
-                본 계산기는 정확한 값이 아닌 근사값입니다. <br>100% 신뢰하지 마시고 참고하는 용도로만 사용하세요!
-            </div>
-        </div>
-    </div>
-    <p></p>
-    <div class="center">
-        <div class="toast" data-autohide="false">
-            <div class="toast-header">
-                <strong class="mr-auto text-primary">사용 방법!</strong>
-                <small class="text-muted">By.ElppaDev</small>
-                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
-            </div>
-            <div class="toast-body">
-                레벨과 환포 퀘스트는 총 누적 합계를 입력하는겁니다!<br>
-                <spen style="color:red;">예&#41;121레벨로 0환생 -> 1환생 일 경우 121 입력<br> 그 후 121레벨 1환생 -> 2환생 일 경우 242 입력</spen><br>
-                <spen style="color:blue;">환포 퀘스트또한 동일하게 계속 총 누적 합계를 입력</spen>
-            </div>
-        </div>
-    </div>
-    <p></p>
-    <script type="text/javascript" >
-	if (/android|webos|iphone|ipad|ipod|blackberry|windows phone/i.test(navigator.userAgent))
-	{(function(){document.writeln('<iframe width="320" height="50" allowtransparency="true" src="https://mtab.clickmon.co.kr/pop/wp_m_320.php?PopAd=CM_M_1003067%7C%5E%7CCM_A_1061983%7C%5E%7CAdver_M_1046207&rt_ad_id_code=RTA_106139&mon_rf=REFERRER_URL" frameborder="0" scrolling="no"></iframe>');})();}
-	else{(function(){document.writeln('<iframe width="200" height="200" allowtransparency="true" src="https://tab2.clickmon.co.kr/pop/wp_ad_200.php?PopAd=CM_M_1003067%7C%5E%7CCM_A_1061983%7C%5E%7CAdver_M_1046207&mon_rf=REFERRER_URL" frameborder="0" scrolling="no"></iframe>');})();}
-</script>
-    <script>
-        $(document).ready(function() {
-            $('.toast').toast('show');
-            $('[data-toggle="tooltip"]').tooltip();
-        });
+    <script type="text/javascript">
+        if (/android|webos|iphone|ipad|ipod|blackberry|windows phone/i.test(navigator.userAgent)) {
+            (function() {
+                document.writeln('<iframe width="320" height="50" allowtransparency="true" src="https://mtab.clickmon.co.kr/pop/wp_m_320.php?PopAd=CM_M_1003067%7C%5E%7CCM_A_1061983%7C%5E%7CAdver_M_1046207&rt_ad_id_code=RTA_106139&mon_rf=REFERRER_URL" frameborder="0" scrolling="no"></iframe>');
+            })();
+        } else {
+            (function() {
+                document.writeln('<iframe width="200" height="200" allowtransparency="true" src="https://tab2.clickmon.co.kr/pop/wp_ad_200.php?PopAd=CM_M_1003067%7C%5E%7CCM_A_1061983%7C%5E%7CAdver_M_1046207&mon_rf=REFERRER_URL" frameborder="0" scrolling="no"></iframe>');
+            })();
+        }
     </script>
-    <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script> <script type="text/javascript"> if(!wcs_add) var wcs_add = {}; wcs_add["wa"] = "c5531fd2872fe"; wcs_do(); </script>
+    <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+    <script type="text/javascript">
+        if (!wcs_add) var wcs_add = {};
+        wcs_add["wa"] = "c5531fd2872fe";
+        wcs_do();
+    </script>
 </body></html>
