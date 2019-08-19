@@ -27,7 +27,7 @@ function ride(){
     var resultspd = Math.floor((chspd * 20 / 100) + (petspd * 80 / 100));
     var resultatt2 = Math.floor(chatt + (petatt * 20 / 100));
     var resultspd2 = Math.floor((chspd * 80 / 100) + (petspd * 20 / 100));
-    alert("계산 된 탑승 후 능력치 입니다!\n\n근거리 능력치\n공격력 : "+resultatt+"\n방어력 : "+resultdef+"\n순발력 : "+resultspd+"\n\n원거리 능력치\n공격력 : "+resultatt2+"\n방어력 : "+resultdef+"\n순발력 : "+resultspd2+"\n\n탑승 후 데미지\n캐릭터 : 총 데미지 X ("+petdef/resultdef+")\n페트 : 총 데미지 X ("+chdef/resultdef);
+    alert("계산 된 탑승 후 능력치 입니다!\n\n근거리 능력치\n공격력 : "+resultatt+"\n방어력 : "+resultdef+"\n순발력 : "+resultspd+"\n\n원거리 능력치\n공격력 : "+resultatt2+"\n방어력 : "+resultdef+"\n순발력 : "+resultspd2+"\n\n탑승 후 데미지\n캐릭터 : 총 데미지 X ("+Math.floor(petdef/resultdef*1000)/1000+")\n페트 : 총 데미지 X ("+Math.floor(chdef/resultdef*1000)/1000+")");
 }
 
 function link(key){
