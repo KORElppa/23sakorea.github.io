@@ -12,7 +12,7 @@ function rebirth(){
     var countatt = Math.floor((attack/fullpoint)*(point)+0.5);
     var countdef = Math.floor((defense/fullpoint)*(point)+0.5);
     var countspeed = Math.floor((speed/fullpoint)*(point)+0.5);
-    alert("환생 포인트 : "+(point+(count*10)).toFixed(0)+"\n"+"체   력 : "+counthp+"\n완   력 : "+countatt+"\n건   강 : "+countdef+"\n스피드 : "+countspeed+"\n오차가 있을 수 있습니다!");
+    alert("환생 포인트 : "+(point+(count*10)).toFixed(0)+"\n"+"체   력 : "+counthp+"\n완   력 : "+countatt+"\n건   강 : "+countdef+"\n스피드 : "+countspeed+"\n오차가 있을 수 있습니다!\n\n1환생은 환생 퀘스트 문서를\n사용하지 않을 경우 무조건 60 포인트 입니다.");
 }
 
 function ride(){
