@@ -31,7 +31,7 @@ function ride() {
 }
 
 function down() {
-    alert('현재 더 빠른 다운로드 속도를 위해 개인 다운로드 서버를 구축중입니다!\n사이트 하단의 광고 한번씩 클릭해주세요!');
+    alert('현재 더 빠른 다운로드 속도를 위해 개인 다운로드 서버를 구축중입니다!\n사이트 하단의 광고 한번씩 클릭해주세요! test');
     window.open('https://wkuackr-my.sharepoint.com/personal/sa_8001_wku_ac_kr/_layouts/15/download.aspx?SourceUrl=%2Fpersonal%2Fsa%5F8001%5Fwku%5Fac%5Fkr%2FDocuments%2Fapk%2F精灵王传说%5FV20191210%5Fsa182%5Ffull%5Fsigned%2Eapk');
 }
 
