@@ -4,6 +4,10 @@
     border-radius: 2em;
 }
 
+#logo{
+    width: 100%;
+}
+
 .btntext{
     font-size: 40px;
 }
