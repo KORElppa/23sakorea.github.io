@@ -1,3 +1,17 @@
+.btn2{
+    width: 200px;
+    margin: 15px;
+    border-radius: 2em;
+}
+
+.btntext{
+    font-size: 40px;
+}
+
+.btn3{
+    width: 346px;
+}
+
 .noti{
     color: red;
     text-align: center;
@@ -28,10 +42,6 @@
 .toast-body{
     background-color: #848484;
     color: white;
-}
-
-.btn-outline-primary{
-    width: 346px;
 }
 
 .nav-link{
