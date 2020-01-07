@@ -1,5 +1,5 @@
 .btn2{
-    width: 170px;
+    width: 160px;
     margin: 15px;
     border-radius: 2em;
 }
@@ -57,6 +57,13 @@
     position: relative;
     left: 50%;
     margin-left: -103px;
+}
+
+.navtext2{
+    color: white;
+    position: relative;
+    left: 50%;
+    margin-left: -71px;
 }
 
 .navmain{
