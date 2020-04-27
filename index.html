@@ -3,7 +3,7 @@
 <html lang="ko">
 
 <head>
-    <title>23SA 웹 유틸리티</title>
+    <title>23SA 온라인 탑승 능력치 계산기</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -15,43 +15,64 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <span class="navtext2">23SA 온라인 유틸리티</span>
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+        <span class="navtext">23SA 온라인 탑승 능력치 계산기</span>
     </nav>
     <br>
-
-    <!-- 스톤에이지 다운로드 지원 -->
-
-    <img id='logo' src="img/logo.png"><br>
-
-    <button class="btn btn-light btn2" onclick="alert('iOS 다운로드 준비중\n현재 더 빠른 다운로드 속도를 위해 개인 다운로드 서버를 구축중입니다!\n사이트 하단의 광고 한번씩 클릭해주세요!');"><img src="img/apple.svg"><span class='btntext'>iOS</span></button>
-    <button class="btn btn-light btn2" onclick="down();"><img src="img/android.svg"><span class='btntext'>Android</span></button>
-    <br>
-
-    <!--                    -->
-
-    <button class="btn btn-light btn2" onclick="link('index2.html')">환생 포인트<br>계산기</button>
-    <button class="btn btn-light btn2" onclick="link('index3.html')">탑승 능력치<br>계산기</button>
-    <p></p>
+    <div>
+        <div class="input-group mb-3 input-group-sm">
+            <div class="input-group-prepend">
+                <span class="input-group-text">캐릭터 공격력</span>
+            </div>
+            <input id="chatt" type="text" class="form-control" placeholder="캐릭터 공격력 입력 (스탯 포인트 X)">
+        </div>
+        <div class="input-group mb-3 input-group-sm">
+            <div class="input-group-prepend">
+                <span class="input-group-text">캐릭터 방어력</span>
+            </div>
+            <input id="chdef" type="text" class="form-control" placeholder="캐릭터 방어력 입력 (스탯 포인트 X)">
+        </div>
+        <div class="input-group mb-3 input-group-sm">
+            <div class="input-group-prepend">
+                <span class="input-group-text">캐릭터 순발력</span>
+            </div>
+            <input id="chspd" type="text" class="form-control" placeholder="캐릭터 순발력 입력 (스탯 포인트 X)">
+        </div>
+        <div class="input-group mb-3 input-group-sm">
+            <div class="input-group-prepend">
+                <span class="input-group-text">탑승펫 공격력</span>
+            </div>
+            <input id="petatt" type="text" class="form-control" placeholder="탑승펫 공격력 입력">
+        </div>
+        <div class="input-group mb-3 input-group-sm">
+            <div class="input-group-prepend">
+                <span class="input-group-text">탑승펫 방어력</span>
+            </div>
+            <input id="petdef" type="text" class="form-control" placeholder="탑승펫 방어력 입력">
+        </div>
+        <div class="input-group mb-3 input-group-sm">
+            <div class="input-group-prepend">
+                <span class="input-group-text">탑승펫 순발력</span>
+            </div>
+            <input id="petspd" type="text" class="form-control" placeholder="탑승펫 순발력 입력">
+        </div>
+    </div>
+    <button type="button" class="btn btn-outline-light btn3" onclick="ride();">능력치 계산</button>
+    <div class='rideattk'>
+    </div>
     <script type="text/javascript">
-        if (/android|webos|iphone|ipad|ipod|blackberry|windows phone/i.test(navigator.userAgent)) {
-            (function() {
-                document.writeln('<iframe width="320" height="50" allowtransparency="true" src="https://mtab.clickmon.co.kr/pop/wp_m_320.php?PopAd=CM_M_1003067%7C%5E%7CCM_A_1061983%7C%5E%7CAdver_M_1046207&rt_ad_id_code=RTA_106139&mon_rf=REFERRER_URL" frameborder="0" scrolling="no"></iframe>');
-            })();
-        } else {
-            (function() {
-                document.writeln('<iframe width="200" height="200" allowtransparency="true" src="https://tab2.clickmon.co.kr/pop/wp_ad_200.php?PopAd=CM_M_1003067%7C%5E%7CCM_A_1061983%7C%5E%7CAdver_M_1046207&mon_rf=REFERRER_URL" frameborder="0" scrolling="no"></iframe>');
-            })();
-        }
-
+        (function(cl, i, c, k, m, o, n) {
+            m = cl.location.protocol + c;
+            o = cl.referrer;
+            m += '&mon_rf=' + encodeURIComponent(o);
+            n = '<' + i + ' type="text/javascript" src="' + m + '"></' + i + '>';
+            cl.writeln(n);
+        })(document, 'script', '//tab2.clickmon.co.kr/pop/wp_ad_300_up_js.php?PopAd=CM_M_1003067%7C%5E%7CCM_A_1061983%7C%5E%7CAdver_M_1046207&rt_ad_id_code=RTA_106139');
     </script>
     <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
     <script type="text/javascript">
         if (!wcs_add) var wcs_add = {};
         wcs_add["wa"] = "c5531fd2872fe";
         wcs_do();
-
     </script>
-</body>
-
-</html>
+</body></html>

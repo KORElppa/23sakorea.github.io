@@ -16,25 +16,57 @@ function rebirth() {
 }
 
 function ride() {
-    var chatt = Number($('#chatt').get(0).value); //캐릭터 공격력
-    var chdef = Number($('#chdef').get(0).value); //캐릭터 방어력
-    var chspd = Number($('#chspd').get(0).value); //캐릭터 순발력
+    var status = new Array();
+    var resstatus = new Array();
+    status[0] = Number($('#chatt').get(0).value); //캐릭터 공격력
+    status[1] = Number($('#chdef').get(0).value); //캐릭터 방어력
+    status[2] = Number($('#chspd').get(0).value); //캐릭터 순발력
     var petatt = Number($('#petatt').get(0).value); //탑승펫 공격력
     var petdef = Number($('#petdef').get(0).value); //탑승펫 방어력
     var petspd = Number($('#petspd').get(0).value); //탑승펫 순발력
-    var resultatt = Math.floor((chatt * 80 / 100) + (petatt * 80 / 100));
-    var resultdef = chdef + petdef;
-    var resultspd = Math.floor((chspd * 20 / 100) + (petspd * 80 / 100));
-    var resultatt2 = Math.floor(chatt + (petatt * 20 / 100));
-    var resultspd2 = Math.floor((chspd * 80 / 100) + (petspd * 20 / 100));
-    alert("계산 된 탑승 후 능력치 입니다!\n\n근거리 능력치\n공격력 : " + resultatt + "\n방어력 : " + resultdef + "\n순발력 : " + resultspd + "\n\n원거리 능력치\n공격력 : " + resultatt2 + "\n방어력 : " + resultdef + "\n순발력 : " + resultspd2 + "\n\n탑승 후 데미지\n캐릭터 : 총 데미지 X (" + Math.floor(petdef / resultdef * 1000) / 1000 + ")\n페트 : 총 데미지 X (" + Math.floor(chdef / resultdef * 1000) / 1000 + ")");
-}
+    resstatus[0] = Math.floor((status[0] * 80 / 100) + (petatt * 80 / 100));
+    resstatus[1] = status[1] + petdef;
+    resstatus[2] = Math.floor((status[2] * 20 / 100) + (petspd * 80 / 100));
+    resstatus[3] = Math.floor(status[0] + (petatt * 20 / 100));
+    resstatus[4] = Math.floor((status[2] * 80 / 100) + (petspd * 20 / 100));
 
-function down() {
-    alert('현재 더 빠른 다운로드 속도를 위해 개인 다운로드 서버를 구축중입니다!\n사이트 하단의 광고 한번씩 클릭해주세요!\n서버 완성 전까지 임시로 OneCloud를 이용합니다.');
-    window.open('https://wkuackr-my.sharepoint.com/:u:/g/personal/sa_8001_wku_ac_kr/ESlgTx4EIWZNpz4HIsvodBAB8rRj4fM1jwxbuoS3ot5z_A?e=0HH7O7');
-}
+    for (i = 0; i <= 4; i++) {
+        if (resstatus[i] == resstatus[3]) {
+            if (resstatus[i] > status[0]) {
+                resstatus[i] = resstatus[i] + "<span class='blue'> (+" + (resstatus[i] - status[0]) + ")</span>"
+            }
+            if (resstatus[i] < status[0]) {
+                resstatus[i] = resstatus[i] + "<span class='red'> (-" + (status[0] - resstatus[i]) + ")</span>"
+            }
+        }
+        if (resstatus[i] == resstatus[4]) {
+            if (resstatus[i] > status[2]) {
+                resstatus[i] = resstatus[i] + "<span class='blue'> (+" + (resstatus[i] - status[2]) + ")</span>"
+            }
+            if (resstatus[i] < status[2]) {
+                resstatus[i] = resstatus[i] + "<span class='red'> (-" + (status[2] - resstatus[i]) + ")</span>"
+            }
+        }
+        if (resstatus[i] > status[i]) {
+            resstatus[i] = resstatus[i] + "<span class='blue'> (+" + (resstatus[i] - status[i]) + ")</span>"
+        }
+        if (resstatus[i] < status[i]) {
+            resstatus[i] = resstatus[i] + "<span class='red'> (-" + (status[i] - resstatus[i]) + ")</span>"
+        }
+    }
 
-function link(key) {
-    location.href = key;
+    $('.rideattk').html("<hr>근거리 능력치" +
+        "<br>공격력 : " +
+        resstatus[0] +
+        "<br>방어력 : " +
+        resstatus[1] +
+        "<br>순발력 : " +
+        resstatus[2] +
+        "<hr>원거리 능력치<br>공격력 : " +
+        resstatus[3] +
+        "<br>방어력 : " +
+        resstatus[1] +
+        "<br>순발력 : " +
+        resstatus[4] +
+        "<hr>");
 }

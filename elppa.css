@@ -1,34 +1,14 @@
-.btn2{
-    width: 150px;
-    margin: 15px;
-    border-radius: 2em;
-}
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 
-#logo{
-    width: 100%;
-}
 
-.btntext{
-    font-size: 30px;
+body{
+    text-align: center;
+    font-family: 'Jua', sans-serif;
 }
 
 .btn3{
+    background-color: black;
     width: 346px;
-}
-
-.noti{
-    color: red;
-    text-align: center;
-}
-
-.center{
-    text-align: center;
-    position: relative;
-    left: 50%;
-    margin-left: -175px;
-    width: 350px;
-    z-index: 9999;
-    background-color : black;
 }
 
 .input-group{
@@ -38,60 +18,31 @@
     margin-left: -172px;
 }
 
-.input-group-text,.form-control,.toast-header,.text-muted,.ml-2{
-    background-color: #2E2E2E;
-    color: white;
-}
-
-.toast-body{
-    background-color: #848484;
-    color: white;
-}
-
-.nav-link{
-    text-align: center;
+.input-group-text{
+    font-weight: bolder;
 }
 
 .navtext{
-    color: white;
     position: relative;
-    left: 50%;
+    left : 50%;
+    
     margin-left: -103px;
 }
 
 .navtext2{
-    color: white;
     position: relative;
     left: 50%;
     margin-left: -71px;
 }
 
-.navmain{
-    color: white;
-    position: relative;
-    left: 50%;
-    margin-left: -71px;
+.blue{
+    color : blue;
 }
 
-body{
-    text-align: center;
-    background-color: black;
+.red{
+    color : red;
 }
 
-.mainbutton{
-    background-color: white;
-    color: black;
-    width: 150px;
-    height: 150px;
-    border-radius: 5em;
+.rideattk{
+    font-weight: bolder;
 }
-
-.mainbutton:hover{
-    background-color: #424242;
-    color: white;
-}
-
-.leftbtn{
-    margin-right: 50px;
-}
-
