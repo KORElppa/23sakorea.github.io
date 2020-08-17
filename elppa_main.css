@@ -107,12 +107,26 @@ hr {
     color: white;
 }
 
-@media (max-height:812px) {
+.notictitle{
+    font-size: 25px;
+    margin-top: 0px;
+    font-weight: 600;
+}
+
+.ctimg{
+    margin-left: 5%;
+}
+
+@media all and (max-height:738px) {
     .installbtn{
         top:16%;
     }
     
+    .appname{
+        top:3%;
+    }
+    
     .appname2{
-        top:8%;
+        top:9%;
     }
 }
