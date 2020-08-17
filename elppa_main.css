@@ -1,0 +1,99 @@
+body{
+    font-family: 'Jua', sans-serif;
+    font-weight: 100;
+}
+
+.appicon {
+    border: 1.5px solid #EAEAEA;
+    width: 230px;
+    border-radius: 2.5em;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.appname {
+    position: absolute;
+    top: 35px;
+    left: 330px;
+    font-weight: 100;
+}
+
+.appname2 {
+    position: absolute;
+    top: 85px;
+    left: 330px;
+    color: #D8D8D8;
+    font-weight: 300;
+}
+
+.installbtn {
+    background-color: #007bff;
+    color: white;
+    font-family: 'Jua', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    position: absolute;
+    top: 165px;
+    left: 330px;
+    width: 100px;
+    height: 30px;
+    border-radius: 1em;
+    border: 1px solid #007bff;
+    transition: 0.3s;
+}
+
+.installbtn:hover {
+    width: 130px;
+}
+
+#score{
+    color: #D8D8D8;
+    font-size:25px;
+    position: absolute;
+    top: 200px;
+    left: 330px;
+}
+
+#star{
+    font-size:30px;
+}
+
+#startext{
+    font-size: 15px;
+    position: relative;
+    top:-10px;
+}
+
+#grade{
+    position: relative;
+    left:100px;
+}
+
+#gradetext{
+    position: relative;
+    left:195px;
+}
+
+hr{
+    border: 0.5px solid #D8D8D8;
+}
+
+.maintext{
+    font-size: 25px;
+    margin-top: 0px;
+    margin-left: 45px;
+    font-weight: 600;
+}
+
+#subtext{
+    position: relative;
+    font-size: 15px;
+    top:10px;
+}
+
+#subtext2{
+    color: #D8D8D8;
+    position: relative;
+    font-size: 13px;
+}
