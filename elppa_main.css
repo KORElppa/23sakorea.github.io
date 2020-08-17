@@ -5,26 +5,28 @@ body{
 
 .appicon {
     border: 1.5px solid #EAEAEA;
-    width: 230px;
-    border-radius: 2.5em;
+    width: 50%;
+    border-radius: 2em;
     position: absolute;
-    top: 50px;
+    top: 5%;
     left: 50px;
 }
 
 .appname {
     position: absolute;
-    top: 35px;
-    left: 330px;
+    top: 5%;
+    left: 70%;
     font-weight: 100;
+    width: 100%;
 }
 
 .appname2 {
     position: absolute;
-    top: 85px;
-    left: 330px;
+    top: 12%;
+    left: 70%;
     color: #D8D8D8;
     font-weight: 300;
+    width: 100%;
 }
 
 .installbtn {
@@ -34,8 +36,8 @@ body{
     font-weight: 300;
     font-size: 15px;
     position: absolute;
-    top: 165px;
-    left: 330px;
+    top: 23%;
+    left: 70%;
     width: 100px;
     height: 30px;
     border-radius: 1em;
@@ -51,8 +53,9 @@ body{
     color: #D8D8D8;
     font-size:25px;
     position: absolute;
-    top: 200px;
-    left: 330px;
+    top: 30%;
+    left: 50px;
+    width: 100%;
 }
 
 #star{
@@ -84,6 +87,11 @@ hr{
     margin-top: 0px;
     margin-left: 45px;
     font-weight: 600;
+}
+
+.main{
+    margin-top: 80%;
+    width: 100%;
 }
 
 #subtext{
