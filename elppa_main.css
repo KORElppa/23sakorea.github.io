@@ -107,12 +107,12 @@ hr {
     color: white;
 }
 
-@media (min-height:812px) {
+@media (max-height:812px) {
     .installbtn{
-        top:15%;
+        top:16%;
     }
     
     .appname2{
-        top:5%;
+        top:8%;
     }
 }
