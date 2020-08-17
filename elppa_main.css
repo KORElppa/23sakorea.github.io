@@ -117,7 +117,7 @@ hr {
     margin-left: 5%;
 }
 
-@media all and (max-height:768px) {
+@media all and (min-height:680px) {
     .installbtn{
         top:16%;
     }
