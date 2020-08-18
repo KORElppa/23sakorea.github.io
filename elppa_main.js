@@ -1,8 +1,8 @@
 function download() {
-    var filter = "win16|win32|win64|Mac|android";
+    var filter = navigator.userAgent;
 
     if (navigator.platform) {
-        if(filter.indexOf(navigator.platform.toLowerCase()) < 0){
+        if(filter.indexOf("iPhone") || filter.indexOf("iPad") || filter.indexOf("iPod")){
            location.href='itms-services://?action=download-manifest&url=https://korelppa.github.io/ee/shiqi.plist';
            }
         else{
