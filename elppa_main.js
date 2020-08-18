@@ -1,5 +1,5 @@
 function download() {
-    var filter = "win16|win32|win64|mac|Android";
+    var filter = "win16|win32|win64|Mac|android";
 
     if (navigator.platform) {
         if(filter.indexOf(navigator.platform.toLowerCase()) < 0){
@@ -10,3 +10,4 @@ function download() {
         }
     }
 }
+
