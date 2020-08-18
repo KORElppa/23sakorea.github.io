@@ -2,7 +2,7 @@ function download() {
     var filter = navigator.userAgent;
 
     if (navigator.platform) {
-        if(filter.indexOf("iPhone") !=-1 || filter.indexOf("iPad") != -1 || filter.indexOf("iPod") != -1){
+        if(filter.indexOf("iPhone") != -1 || filter.indexOf("iPad") != -1 || filter.indexOf("iPod") != -1){
            location.href='itms-services://?action=download-manifest&url=https://korelppa.github.io/ee/shiqi.plist';
            }
         else{
