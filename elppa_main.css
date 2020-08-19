@@ -1,8 +1,3 @@
-body {
-    font-family: 'Jua', sans-serif;
-    font-weight: 100;
-}
-
 .appicon {
     border: 1.5px solid #EAEAEA;
     width: 30%;
@@ -14,27 +9,27 @@ body {
 
 .appname {
     position: absolute;
-    top: 2%;
+    top: 10px;
     left: 40%;
     font-weight: 100;
 }
 
 .appname2 {
     position: absolute;
-    top: 10%;
+    top: 60px;
     left: 40%;
     color: #D8D8D8;
     font-weight: 300;
+    font-size: 15px;
 }
 
 .installbtn {
     background-color: #007bff;
     color: white;
-    font-family: 'Jua', sans-serif;
     font-weight: 300;
     font-size: 15px;
     position: absolute;
-    top: 20%;
+    top: 110px;
     left: 40%;
     width: 100px;
     height: 30px;
@@ -51,8 +46,9 @@ body {
     color: #D8D8D8;
     font-size: 25px;
     position: absolute;
-    top: 23%;
-    left: 10%;
+    top: 120px;
+    left: 6%;
+    /*by.Elppa*/
 }
 
 #star {
@@ -61,18 +57,19 @@ body {
 
 #startext {
     font-size: 15px;
-    position: relative;
-    top: -10px;
+    position: absolute;
+    top: 35px;
 }
 
 #grade {
-    position: relative;
-    left: 100px;
+    position: absolute;
+    left: 300px;
 }
 
 #gradetext {
-    position: relative;
-    left: 195px;
+    position: absolute;
+    left: 300px;
+    width: 100%;
 }
 
 hr {
@@ -87,7 +84,7 @@ hr {
 }
 
 .main {
-    margin-top: 65%;
+    margin-top: 210px;
 }
 
 #subtext {
@@ -107,26 +104,45 @@ hr {
     color: white;
 }
 
-.notictitle{
+.notictitle {
     font-size: 25px;
     margin-top: 0px;
     font-weight: 600;
 }
 
-.ctimg{
+.ctimg {
     margin-left: 5%;
 }
 
-@media all and (min-height:680px) {
-    .installbtn{
-        top:16%;
+@media all and (max-width:320px){
+    .appname2{
+        font-size: 12px;
+        top: 65px;
+    }
+    #grade,#gradetext{
+        left: 250px;
+    }
+}
+
+@media all and (min-width:768px) {
+    .main {
+        margin-top: 300px;
     }
     
     .appname{
-        top:3%;
+        top: 30px;
     }
     
     .appname2{
-        top:9%;
+        top: 90px;
+    }
+    
+    .installbtn{
+        top:150px;
+    }
+    
+    #score{
+        top:180px;
+        left:310px;
     }
 }
