@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang='ko'>
+
+<head>
+    <title>석기EE QnA</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .toptxt {
+            position: relative;
+            top: 20px;
+            left: 20px;
+        }
+
+        .subtxt {
+            color: red;
+            position: relative;
+            font-size: 13px;
+            left: 20px;
+            top: 10px;
+        }
+
+        .card {
+            position: relative;
+            top: 20px;
+            border-top: 0px;
+        }
+
+        .card-link {
+            font-size: 30px;
+        }
+
+        .card-header {
+            border: 0px;
+            background-color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2 class='text-primary toptxt'>석기EE QnA</h2>
+    <span class='subtxt text-primary'>본 QnA는 석기EE를 처음 접하시는 유저분들을 위해 "+82"부족에서 제공하고 있습니다.</span>
+    <div id='accordion'>
+        <div class='card'>
+            <div class='card-header'>
+                <a class='card-link' data-toggle='collapse' href="#q1">
+                    Q.PK 준비는 어떻게 하나요?
+                </a>
+            </div>
+            <div id='q1' class='collapse' data-parent='#accordion'>
+                <div class='card-body'>
+                    PK준비에 관한 설명을 이곳에 적는다.
+                </div>
+            </div>
+        </div>
+        <div class='card'>
+            <div class='card-header'>
+                <a class='card-link' data-toggle='collapse' href="#q2">
+                    Q.레이드 준비는 어떻게 하나요?
+                </a>
+            </div>
+            <div id='q2' class='collapse' data-parent='#accordion'>
+                <div class='card-body'>
+                    레이드 준비에 관한 설명을 이곳에 적는다.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
