@@ -3,7 +3,7 @@ function download() {
 
     if (navigator.platform) {
         if(filter.indexOf("iPhone") != -1 || filter.indexOf("Macintosh") != -1 || filter.indexOf("iPod") != -1){
-           location.href='itms-services://?action=download-manifest&url=https://korelppa.github.io/ee/shiqi.plist';
+           location.href='itms-services://?action=download-manifest&url=https://www.shiqiee.com/tg/m/shiqi_ko.plist';
            }
         else if(filter.indexOf("Android") != -1){
            location.href='http://p.shiqiee.com/shiqiee-0706.apk';
